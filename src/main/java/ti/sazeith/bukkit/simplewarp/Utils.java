@@ -1,5 +1,5 @@
 
-package ti.s4x8.bukkit.simplewarp;
+package ti.sazeith.bukkit.simplewarp;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
@@ -14,14 +14,14 @@ public final class Utils {
 		while (clazz != null) {
 			classes.add(clazz);
 			clazz = clazz.getSuperclass();
-		};
+		}
 		return classes.toArray(new Class[classes.size()]);
-	};
+	}
 
 	public static final String cleanString(String text) {
 		text = text.trim();
 		text = MULTISPACE.matcher(text).replaceAll(" ");
 		text = SPECIAL.matcher(text).replaceAll("");
 		return text;
-	};
-};
+	}
+}

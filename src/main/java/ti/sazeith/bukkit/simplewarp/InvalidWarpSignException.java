@@ -1,12 +1,12 @@
 
-package ti.s4x8.bukkit.simplewarp;
+package ti.sazeith.bukkit.simplewarp;
 
 public class InvalidWarpSignException extends Exception {
 	public InvalidWarpSignException() {
-	
-	};
-	
+		super();
+	}
+
 	public InvalidWarpSignException(String desc) {
 		super(desc);
-	};
-};
+	}
+}

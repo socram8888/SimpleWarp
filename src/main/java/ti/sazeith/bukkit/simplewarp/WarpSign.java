@@ -1,5 +1,5 @@
 
-package ti.s4x8.bukkit.simplewarp;
+package ti.sazeith.bukkit.simplewarp;
 
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
@@ -18,29 +18,29 @@ public class WarpSign {
 		Material signMaterial = block.getType();
 		if (!Material.SIGN_POST.equals(signMaterial) && !Material.WALL_SIGN.equals(signMaterial)) {
 			throw new NotAWarpSignException("Not a sign!");
-		};
+		}
 		Sign sign = (Sign) block.getState();
 		fromLines(sign.getLines());
-	};
-	
+	}
+
 	public WarpSign(String[] text) throws InvalidWarpSignException {
 		fromLines(text);
-	};
-	
+	}
+
 	private void fromLines(String[] text) throws InvalidWarpSignException {
 		if (!"[simplewarp]".equalsIgnoreCase(text[0])) {
 			throw new NotAWarpSignException("Invalid header");
-		};
+		}
 
 		String[] params = Utils.cleanString(text[1] + "\n" + text[2] + "\n" + text[3]).split(" ");
-		
+
 		boolean readWorld = false;
 		boolean readPos = false;
-		
+
 		if (params.length == 1) {
 			if (params[0].length() != 0) {
 				readWorld = true;
-			};
+			}
 		} else if (params.length == 3) {
 			readPos = true;
 		} else if (params.length == 4) {
@@ -48,14 +48,14 @@ public class WarpSign {
 			readPos = true;
 		} else {
 			throw new InvalidWarpSignException("Invalid amount of parameters");
-		};
-		
+		}
+
 		int ptr = 0;
 		if (readWorld) {
 			world = params[0];
 			ptr++;
-		};
-		
+		}
+
 		if (readPos) {
 			positionUndefined = false;
 			try {
@@ -64,7 +64,7 @@ public class WarpSign {
 				z = Integer.parseInt(params[ptr + 2]);
 			} catch (NumberFormatException e) {
 				throw new InvalidWarpSignException("Invalid coords");
-			};
-		};
-	};
-};
+			}
+		}
+	}
+}
