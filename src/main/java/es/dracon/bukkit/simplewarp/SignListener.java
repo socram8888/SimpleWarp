@@ -1,5 +1,5 @@
 
-package ti.sazeith.bukkit.simplewarp;
+package es.dracon.bukkit.simplewarp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

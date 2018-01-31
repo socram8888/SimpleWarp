@@ -1,5 +1,5 @@
 
-package ti.sazeith.bukkit.simplewarp;
+package es.dracon.bukkit.simplewarp;
 
 public class InvalidWarpSignException extends Exception {
 	public InvalidWarpSignException() {
