@@ -36,11 +36,9 @@ public class EntityListener implements Listener {
 	private void scanTeleport(Entity entity, Block plate) {
 		if (!entity.isEmpty() || entity.isInsideVehicle()) return;
 
-		Material plateMaterial = plate.getType();
-		if (
-			!Material.STONE_PLATE.equals(plateMaterial) &&
-			!Material.WOOD_PLATE.equals(plateMaterial)
-		) return;
+		if (!MaterialFamily.PLATES.hasMaterial(plate)) {
+			return;
+		}
 
 		WarpSign sign;
 		try {

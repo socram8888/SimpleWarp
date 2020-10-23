@@ -15,8 +15,7 @@ public class WarpSign {
 	@Getter private int z;
 
 	public WarpSign(Block block) throws InvalidWarpSignException {
-		Material signMaterial = block.getType();
-		if (!Material.SIGN_POST.equals(signMaterial) && !Material.WALL_SIGN.equals(signMaterial)) {
+		if (!MaterialFamily.SIGNS.hasMaterial(block)) {
 			throw new NotAWarpSignException("Not a sign!");
 		}
 		Sign sign = (Sign) block.getState();
