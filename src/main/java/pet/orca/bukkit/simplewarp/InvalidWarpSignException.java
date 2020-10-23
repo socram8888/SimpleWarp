@@ -1,5 +1,5 @@
 
-package es.dracon.bukkit.simplewarp;
+package pet.orca.bukkit.simplewarp;
 
 public class InvalidWarpSignException extends Exception {
 	public InvalidWarpSignException() {

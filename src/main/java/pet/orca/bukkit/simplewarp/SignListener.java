@@ -1,5 +1,5 @@
 
-package es.dracon.bukkit.simplewarp;
+package pet.orca.bukkit.simplewarp;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

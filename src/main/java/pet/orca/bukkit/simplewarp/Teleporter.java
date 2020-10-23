@@ -1,5 +1,5 @@
 
-package es.dracon.bukkit.simplewarp;
+package pet.orca.bukkit.simplewarp;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
