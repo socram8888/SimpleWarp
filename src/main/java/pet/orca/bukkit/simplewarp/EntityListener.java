@@ -36,7 +36,7 @@ public class EntityListener implements Listener {
 	private void scanTeleport(Entity entity, Block plate) {
 		if (!entity.isEmpty() || entity.isInsideVehicle()) return;
 
-		if (!MaterialFamily.PLATES.hasMaterial(plate)) {
+		if (!MaterialFamily.PRESSURE_PLATES.hasMaterial(plate)) {
 			return;
 		}
 
